@@ -1,8 +1,10 @@
 package com.example.graphicstest.framework.foundation
 
 import android.app.Activity
+import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
+import android.graphics.Rect
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
@@ -39,6 +41,8 @@ class TopLevel(val id: String) : Widget(size = Size.Fill), DefaultLifecycleObser
             }
         }
     }
+
+    var child: Widget? = null
 
     override val visibility = visibilityEvents.consumeAsFlow().onEach {
         val (activity, event) = it
@@ -83,7 +87,9 @@ class TopLevel(val id: String) : Widget(size = Size.Fill), DefaultLifecycleObser
         topLevelsMutable.remove(key = id)
     }
 
-    override fun onDrawForeground(canvas: Canvas) {}
+    override fun onDrawForeground(context: Context, bounds: Rect, canvas: Canvas) {
+        child?.onDrawForeground(context, bounds, canvas)
+    }
 }
 
 val Lifecycle.Event.isDestructive get() = when(this) {

@@ -1,7 +1,10 @@
 package com.example.graphicstest.framework.foundation
 
+import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
+import android.graphics.Paint
+import android.graphics.Rect
 import androidx.annotation.ColorInt
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -48,9 +51,13 @@ abstract class Widget(var size: Size) {
     @ColorInt
     var backgroundColor: Int = Color.TRANSPARENT
 
-    abstract fun onDrawForeground(canvas: Canvas)
-    open fun onDrawBackground(canvas: Canvas) {
-        if (backgroundColor != Color.TRANSPARENT)
-        canvas.drawColor(backgroundColor)
+    @ColorInt
+    var foregroundColor: Int = Color.BLACK
+
+    abstract fun onDrawForeground(context: Context, bounds: Rect, canvas: Canvas)
+    open fun onDrawBackground(context: Context, bounds: Rect, canvas: Canvas) {
+        if (backgroundColor != Color.TRANSPARENT) {
+            canvas.drawRect(bounds, Paint().apply { color = backgroundColor })
+        }
     }
 }
