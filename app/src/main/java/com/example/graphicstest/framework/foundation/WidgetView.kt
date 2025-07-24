@@ -22,9 +22,14 @@ class WidgetView @JvmOverloads constructor(
         holder.addCallback(this)
     }
 
+    override fun onDrawForeground(canvas: Canvas) {
+        val content = content ?: return
+        content.onDrawForeground(canvas)
+    }
+
     override fun onDraw(canvas: Canvas) {
         val content = content ?: return
-        canvas.drawColor(content.backgroundColor)
+        content.onDrawBackground(canvas)
     }
 
     override fun surfaceChanged(holder: SurfaceHolder, format: Int, width: Int, height: Int) {

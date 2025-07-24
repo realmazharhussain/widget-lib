@@ -1,6 +1,8 @@
 package com.example.graphicstest.framework.foundation
 
 import android.app.Activity
+import android.graphics.Canvas
+import android.graphics.Color
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
@@ -53,6 +55,10 @@ class TopLevel(val id: String) : Widget(size = Size.Fill), DefaultLifecycleObser
         it.second.targetState.toVisibilityState()
     }.stateIn(scope = _coroutineScope, started = SharingStarted.Companion.Eagerly, initialValue = VisibilityState.INVISIBLE)
 
+    init {
+        backgroundColor = Color.LTGRAY
+    }
+
     fun setActivity(activity: WidgetActivity) {
         if (activityRef.get() === activity) return
         activity.lifecycle.addObserver(activityLifecycleObserver)
@@ -76,6 +82,8 @@ class TopLevel(val id: String) : Widget(size = Size.Fill), DefaultLifecycleObser
         super.onDestroy(owner)
         topLevelsMutable.remove(key = id)
     }
+
+    override fun onDrawForeground(canvas: Canvas) {}
 }
 
 val Lifecycle.Event.isDestructive get() = when(this) {
