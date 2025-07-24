@@ -27,3 +27,4 @@ class MainActivity : WidgetActivity() {
 }
 ```
 
+<img width=33% alt="image" src="https://github.com/user-attachments/assets/52ff7c78-b756-445e-99c0-cf7abf3e1c85" />
