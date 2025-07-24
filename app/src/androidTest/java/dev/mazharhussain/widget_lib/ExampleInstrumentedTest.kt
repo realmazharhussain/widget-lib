@@ -1,4 +1,4 @@
-package com.example.graphicstest
+package dev.mazharhussain.widget_lib
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.example.graphicstest", appContext.packageName)
+        assertEquals("dev.mazharhussain.widget_lib", appContext.packageName)
     }
 }

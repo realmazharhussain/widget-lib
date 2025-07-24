@@ -1,18 +1,18 @@
-package com.example.graphicstest
+package dev.mazharhussain.widget_lib
 
 import android.graphics.Color
-import com.example.graphicstest.framework.foundation.Length
-import com.example.graphicstest.framework.foundation.Size
-import com.example.graphicstest.framework.foundation.TopLevel
-import com.example.graphicstest.framework.foundation.WidgetActivity
-import com.example.graphicstest.framework.foundation.dp
-import com.example.graphicstest.framework.foundation.layouts.CenterBox
-import com.example.graphicstest.framework.foundation.layouts.Column
-import com.example.graphicstest.framework.foundation.layouts.Row
-import com.example.graphicstest.framework.foundation.widgets.Circle
-import com.example.graphicstest.framework.foundation.widgets.Rectangle
-import com.example.graphicstest.framework.foundation.widgets.Text
-import com.example.graphicstest.framework.foundation.widgets.Triangle
+import dev.mazharhussain.widget_lib.framework.foundation.Length
+import dev.mazharhussain.widget_lib.framework.foundation.Size
+import dev.mazharhussain.widget_lib.framework.foundation.TopLevel
+import dev.mazharhussain.widget_lib.framework.foundation.WidgetActivity
+import dev.mazharhussain.widget_lib.framework.foundation.dp
+import dev.mazharhussain.widget_lib.framework.foundation.layouts.CenterBox
+import dev.mazharhussain.widget_lib.framework.foundation.layouts.Column
+import dev.mazharhussain.widget_lib.framework.foundation.layouts.Row
+import dev.mazharhussain.widget_lib.framework.foundation.widgets.Circle
+import dev.mazharhussain.widget_lib.framework.foundation.widgets.Rectangle
+import dev.mazharhussain.widget_lib.framework.foundation.widgets.Text
+import dev.mazharhussain.widget_lib.framework.foundation.widgets.Triangle
 
 
 class MainActivity : WidgetActivity() {

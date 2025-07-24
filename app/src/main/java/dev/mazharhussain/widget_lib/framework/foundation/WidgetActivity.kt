@@ -1,11 +1,11 @@
-package com.example.graphicstest.framework.foundation
+package dev.mazharhussain.widget_lib.framework.foundation
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.graphicstest.R
+import dev.mazharhussain.widget_lib.R
 
 abstract class WidgetActivity : AppCompatActivity() {
     lateinit var content: TopLevel; private set

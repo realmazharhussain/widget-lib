@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.graphicstest"
+    namespace = "dev.mazharhussain.widget_lib"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.graphicstest"
+        applicationId = "dev.mazharhussain.widget_lib"
         minSdk = 26
         targetSdk = 36
         versionCode = 1

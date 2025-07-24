@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Graphics Test"
+rootProject.name = "WidgetLib"
 include(":app")
  

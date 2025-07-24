@@ -1,13 +1,13 @@
-package com.example.graphicstest.framework.foundation.widgets
+package dev.mazharhussain.widget_lib.framework.foundation.widgets
 
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.Path
 import android.graphics.Rect
-import com.example.graphicstest.framework.foundation.Length
-import com.example.graphicstest.framework.foundation.Size
-import com.example.graphicstest.framework.foundation.Widget
+import dev.mazharhussain.widget_lib.framework.foundation.Length
+import dev.mazharhussain.widget_lib.framework.foundation.Size
+import dev.mazharhussain.widget_lib.framework.foundation.Widget
 
 class Triangle(size: Size) : Widget(size) {
 

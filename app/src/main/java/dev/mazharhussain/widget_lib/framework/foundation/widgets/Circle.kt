@@ -1,12 +1,12 @@
-package com.example.graphicstest.framework.foundation.widgets
+package dev.mazharhussain.widget_lib.framework.foundation.widgets
 
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.Rect
 import androidx.core.graphics.toRectF
-import com.example.graphicstest.framework.foundation.Length
-import com.example.graphicstest.framework.foundation.Widget
+import dev.mazharhussain.widget_lib.framework.foundation.Length
+import dev.mazharhussain.widget_lib.framework.foundation.Widget
 
 class Circle(size: Length) : Widget(width = size, height = size) {
     override fun onDrawForeground(context: Context, bounds: Rect, canvas: Canvas) {

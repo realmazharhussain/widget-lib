@@ -1,4 +1,4 @@
-package com.example.graphicstest
+package dev.mazharhussain.widget_lib
 
 import android.app.Application
 

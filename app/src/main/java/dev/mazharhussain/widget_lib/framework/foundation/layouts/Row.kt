@@ -1,12 +1,12 @@
-package com.example.graphicstest.framework.foundation.layouts
+package dev.mazharhussain.widget_lib.framework.foundation.layouts
 
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Rect
-import com.example.graphicstest.framework.foundation.Length
-import com.example.graphicstest.framework.foundation.Size
-import com.example.graphicstest.framework.foundation.Widget
-import com.example.graphicstest.framework.foundation.toPx
+import dev.mazharhussain.widget_lib.framework.foundation.Length
+import dev.mazharhussain.widget_lib.framework.foundation.Size
+import dev.mazharhussain.widget_lib.framework.foundation.Widget
+import dev.mazharhussain.widget_lib.framework.foundation.toPx
 
 class Row(size: Size) : Layout(size) {
     constructor(width: Length, height: Length): this(Size(width, height))

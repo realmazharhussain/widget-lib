@@ -1,4 +1,4 @@
-package com.example.graphicstest.framework.foundation
+package dev.mazharhussain.widget_lib.framework.foundation
 
 import android.app.Activity
 import android.content.Context
