@@ -1,4 +1,4 @@
-package com.example.graphicstest.framework
+package com.example.graphicstest.framework.foundation
 
 import android.graphics.Color
 import androidx.annotation.ColorInt

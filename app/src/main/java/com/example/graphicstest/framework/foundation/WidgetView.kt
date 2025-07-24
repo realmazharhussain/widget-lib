@@ -1,4 +1,4 @@
-package com.example.graphicstest.framework
+package com.example.graphicstest.framework.foundation
 
 import android.content.Context
 import android.graphics.Canvas

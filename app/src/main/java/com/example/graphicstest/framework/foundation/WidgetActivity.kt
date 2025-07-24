@@ -1,4 +1,4 @@
-package com.example.graphicstest.framework
+package com.example.graphicstest.framework.foundation
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

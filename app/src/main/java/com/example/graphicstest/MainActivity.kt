@@ -1,7 +1,7 @@
 package com.example.graphicstest
 
-import com.example.graphicstest.framework.TopLevel
-import com.example.graphicstest.framework.WidgetActivity
+import com.example.graphicstest.framework.foundation.TopLevel
+import com.example.graphicstest.framework.foundation.WidgetActivity
 
 
 class MainActivity : WidgetActivity() {
