@@ -20,6 +20,7 @@ sealed interface Length {
 val Int.dp get() = Length.Dp(dp = this)
 fun Length.Dp.toPx(density: Float) = dp * density
 fun Length.Dp.roundToPx(density: Float) = toPx(density).roundToInt()
+fun Length.toSize() = Size(width = this, height = this)
 
 fun Length.toPx(density: Float, space: Int) = when (this) {
     is Length.Dp -> roundToPx(density)

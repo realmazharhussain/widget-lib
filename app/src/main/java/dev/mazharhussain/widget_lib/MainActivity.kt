@@ -10,29 +10,35 @@ import dev.mazharhussain.widget_lib.framework.layouts.CenterBox
 import dev.mazharhussain.widget_lib.framework.layouts.Column
 import dev.mazharhussain.widget_lib.framework.layouts.Row
 import dev.mazharhussain.widget_lib.framework.widgets.Circle
+import dev.mazharhussain.widget_lib.framework.widgets.Padding
 import dev.mazharhussain.widget_lib.framework.widgets.Rectangle
 import dev.mazharhussain.widget_lib.framework.widgets.Text
 import dev.mazharhussain.widget_lib.framework.widgets.Triangle
 
 
 class MainActivity : WidgetActivity() {
-    override fun content() = TopLevel(id = "main").apply {
-        child = Column(Size.Fill).apply {
-            children += Rectangle(size = 100.dp).apply { foregroundColor = Color.GREEN }
-            children += Row(width = Length.Fill, height = 200.dp).apply {
-                backgroundColor = Color.WHITE
+    override fun content() = MyContent()
+}
 
-                children += Rectangle(width = 100.dp, height = 200.dp).apply { foregroundColor = Color.YELLOW }
-                children += CenterBox(width = 50.dp, height = Length.Fill).apply {
-                    child = Circle(size = 50.dp).apply { foregroundColor = Color.CYAN }
-                }
-                children += Triangle(size = 200.dp).apply { foregroundColor = Color.MAGENTA }
+class MyContent : TopLevel(id = "main") {
+    init { child = content() }
+
+    fun content() = Column(Size.Fill).apply {
+        children += Rectangle(size = 100.dp).apply { foregroundColor = Color.GREEN }
+        children += Padding(size = 20.dp)
+        children += Row(width = Length.Fill, height = 200.dp).apply {
+            backgroundColor = Color.WHITE
+
+            children += Rectangle(width = 100.dp, height = 200.dp).apply { foregroundColor = Color.YELLOW }
+            children += CenterBox(width = 50.dp, height = Length.Fill).apply {
+                child = Circle(size = 50.dp).apply { foregroundColor = Color.CYAN }
             }
-            children += Rectangle(width = Length.Fill, height = 100.dp).apply { foregroundColor = Color.RED }
-            children += CenterBox(Size.Fill).apply {
-                child = Text(width = 100.dp, height = Length.Fill).apply {
-                    text = "Hello World"
-                }
+            children += Triangle(size = 200.dp).apply { foregroundColor = Color.MAGENTA }
+        }
+        children += Rectangle(width = Length.Fill, height = 100.dp).apply { foregroundColor = Color.RED }
+        children += CenterBox(Size.Fill).apply {
+            child = Text(width = 100.dp, height = Length.Fill).apply {
+                text = "Hello World"
             }
         }
     }

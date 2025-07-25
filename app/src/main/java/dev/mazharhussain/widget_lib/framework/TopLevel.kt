@@ -28,7 +28,7 @@ private val topLevelsMutable = mutableMapOf<String, TopLevel>()
 val topLevels = topLevelsMutable.asMap()
 
 @OptIn(ExperimentalCoroutinesApi::class)
-class TopLevel(val id: String) : Widget(size = Size.Fill), DefaultLifecycleObserver {
+abstract class TopLevel(val id: String) : Widget(size = Size.Fill), DefaultLifecycleObserver {
     private var activityRef = WeakReference<WidgetActivity>(null)
     private val _coroutineScope = CoroutineScope(
         context = SupervisorJob() + Dispatchers.Default.limitedParallelism(parallelism = 1)
@@ -90,6 +90,7 @@ class TopLevel(val id: String) : Widget(size = Size.Fill), DefaultLifecycleObser
     }
 
     override fun onDrawForeground(context: Context, bounds: Rect, canvas: Canvas) {
+        child?.onDrawBackground(context, bounds, canvas)
         child?.onDrawForeground(context, bounds, canvas)
     }
 }

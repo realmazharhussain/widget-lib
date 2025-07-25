@@ -18,7 +18,7 @@ import kotlinx.coroutines.flow.update
 import java.lang.ref.WeakReference
 
 abstract class Widget(var size: Size) {
-    constructor(width: Length, height: Length): this(Size(width, height))
+    constructor(size: Length) : this(size.toSize())
 
     var width
         get() = size.width

@@ -8,10 +8,11 @@ import android.graphics.Rect
 import dev.mazharhussain.widget_lib.framework.Length
 import dev.mazharhussain.widget_lib.framework.Size
 import dev.mazharhussain.widget_lib.framework.Widget
+import dev.mazharhussain.widget_lib.framework.toSize
 
 class Triangle(size: Size) : Widget(size) {
 
-    constructor(size: Length): this(Size(width = size, height = size))
+    constructor(size: Length): this(size.toSize())
 
     override fun onDrawForeground(context: Context, bounds: Rect, canvas: Canvas) {
         val path = Path().apply {
