@@ -5,11 +5,10 @@ import android.graphics.Canvas
 import android.graphics.Rect
 import dev.mazharhussain.widget_lib.framework.Length
 import dev.mazharhussain.widget_lib.framework.Size
-import dev.mazharhussain.widget_lib.framework.Widget
 import dev.mazharhussain.widget_lib.framework.toPx
 import dev.mazharhussain.widget_lib.framework.utils.Child
 
-class CenterBox(size: Size) : Widget(size) {
+class CenterBox(size: Size) : Layout(size) {
 
     constructor(width: Length, height: Length) : this(Size(width, height))
 
@@ -36,5 +35,6 @@ class CenterBox(size: Size) : Widget(size) {
 
         child.onDrawBackground(context, childBounds, canvas)
         child.onDrawForeground(context, childBounds, canvas)
+        super.onDrawForeground(context, bounds, canvas)
     }
 }

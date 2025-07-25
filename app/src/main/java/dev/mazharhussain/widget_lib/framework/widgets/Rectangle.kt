@@ -16,5 +16,6 @@ class Rectangle(
 
     override fun onDrawForeground(context: Context, bounds: Rect, canvas: Canvas) {
         canvas.drawRect(bounds, Paint().apply { color = foregroundColor })
+        super.onDrawForeground(context, bounds, canvas)
     }
 }

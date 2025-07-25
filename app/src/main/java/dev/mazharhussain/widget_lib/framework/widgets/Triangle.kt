@@ -21,5 +21,6 @@ class Triangle(size: Size) : Widget(size) {
             close()
         }
         canvas.drawPath(path, Paint().apply { color = foregroundColor })
+        super.onDrawForeground(context, bounds, canvas)
     }
 }

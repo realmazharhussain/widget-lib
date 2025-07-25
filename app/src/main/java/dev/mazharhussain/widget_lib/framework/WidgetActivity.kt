@@ -5,7 +5,12 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
 import dev.mazharhussain.widget_lib.R
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.filter
+import kotlinx.coroutines.flow.filterIsInstance
+import kotlinx.coroutines.launch
 
 abstract class WidgetActivity : AppCompatActivity() {
     lateinit var content: TopLevel; private set
@@ -31,6 +36,14 @@ abstract class WidgetActivity : AppCompatActivity() {
         }
         content.setActivity(activity = this)
         view.content = content
+
+        lifecycleScope.launch {
+            content.visibility.filter { it != VisibilityState.INVISIBLE }.collectLatest {
+                content.needsRedraw.filter { it }.collectLatest {
+                    view.triggerDraw()
+                }
+            }
+        }
     }
 
     override fun onSaveInstanceState(outState: Bundle) {

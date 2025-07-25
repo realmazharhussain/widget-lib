@@ -11,5 +11,6 @@ import dev.mazharhussain.widget_lib.framework.Widget
 class Circle(size: Length) : Widget(width = size, height = size) {
     override fun onDrawForeground(context: Context, bounds: Rect, canvas: Canvas) {
         canvas.drawArc(bounds.toRectF(), 0f, 360f, true, Paint().apply { color = foregroundColor })
+        super.onDrawForeground(context, bounds, canvas)
     }
 }

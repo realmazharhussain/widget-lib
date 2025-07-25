@@ -7,6 +7,8 @@ import android.graphics.Rect
 import android.util.AttributeSet
 import android.view.SurfaceHolder
 import android.view.SurfaceView
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class WidgetView @JvmOverloads constructor(
     context: Context,
@@ -50,7 +52,7 @@ class WidgetView @JvmOverloads constructor(
     override fun surfaceDestroyed(holder: SurfaceHolder) {
     }
 
-    private fun triggerDraw() {
+    fun triggerDraw() {
         val canvas = holder.lockHardwareCanvas()
         draw(canvas)
         holder.unlockCanvasAndPost(canvas)

@@ -9,6 +9,7 @@ import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.LifecycleOwner
+import dev.mazharhussain.widget_lib.framework.layouts.Layout
 import dev.mazharhussain.widget_lib.framework.utils.Child
 import dev.mazharhussain.widget_lib.framework.utils.asMap
 import kotlinx.coroutines.CoroutineScope
@@ -28,7 +29,7 @@ private val topLevelsMutable = mutableMapOf<String, TopLevel>()
 val topLevels = topLevelsMutable.asMap()
 
 @OptIn(ExperimentalCoroutinesApi::class)
-class TopLevel(val id: String) : Widget(size = Size.Fill), DefaultLifecycleObserver {
+class TopLevel(val id: String) : Layout(size = Size.Fill), DefaultLifecycleObserver {
     private var activityRef = WeakReference<WidgetActivity>(null)
     private val _coroutineScope = CoroutineScope(
         context = SupervisorJob() + Dispatchers.Default.limitedParallelism(parallelism = 1)

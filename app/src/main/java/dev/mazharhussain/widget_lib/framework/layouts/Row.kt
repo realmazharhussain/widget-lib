@@ -9,7 +9,7 @@ import dev.mazharhussain.widget_lib.framework.Widget
 import dev.mazharhussain.widget_lib.framework.toPx
 import dev.mazharhussain.widget_lib.framework.utils.children
 
-class Row(size: Size) : Widget(size) {
+class Row(size: Size) : Layout(size) {
     constructor(width: Length, height: Length): this(Size(width, height))
 
     val children = children()
@@ -38,6 +38,7 @@ class Row(size: Size) : Widget(size) {
 
             horizontalOffset += childWidth
         }
+        super.onDrawForeground(context, bounds, canvas)
     }
 
     @Deprecated("", ReplaceWith("children += child"))

@@ -8,7 +8,7 @@ import dev.mazharhussain.widget_lib.framework.Widget
 import dev.mazharhussain.widget_lib.framework.toPx
 import dev.mazharhussain.widget_lib.framework.utils.children
 
-class Column(size: Size) : Widget(size) {
+class Column(size: Size) : Layout(size) {
     val children = children()
 
     override fun onDrawForeground(context: Context, bounds: Rect, canvas: Canvas) {
@@ -35,6 +35,7 @@ class Column(size: Size) : Widget(size) {
 
             verticalOffset += childHeight
         }
+        super.onDrawForeground(context, bounds, canvas)
     }
 
     @Deprecated("", ReplaceWith("children += child"))
