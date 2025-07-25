@@ -7,7 +7,7 @@ import dev.mazharhussain.widget_lib.framework.Size
 import dev.mazharhussain.widget_lib.framework.Widget
 import dev.mazharhussain.widget_lib.framework.toPx
 
-class Column(size: Size) : Layout(size) {
+class Column(size: Size) : Widget(size) {
     val children = mutableListOf<Widget>()
 
     override fun onDrawForeground(context: Context, bounds: Rect, canvas: Canvas) {

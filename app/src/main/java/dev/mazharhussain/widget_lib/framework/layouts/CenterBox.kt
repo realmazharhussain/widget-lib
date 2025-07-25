@@ -8,7 +8,7 @@ import dev.mazharhussain.widget_lib.framework.Size
 import dev.mazharhussain.widget_lib.framework.Widget
 import dev.mazharhussain.widget_lib.framework.toPx
 
-class CenterBox(size: Size) : Layout(size) {
+class CenterBox(size: Size) : Widget(size) {
 
     constructor(width: Length, height: Length) : this(Size(width, height))
 
