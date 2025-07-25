@@ -9,6 +9,8 @@ import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.LifecycleOwner
+import dev.mazharhussain.widget_lib.framework.utils.Child
+import dev.mazharhussain.widget_lib.framework.utils.asMap
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -23,7 +25,7 @@ import kotlinx.coroutines.launch
 import java.lang.ref.WeakReference
 
 private val topLevelsMutable = mutableMapOf<String, TopLevel>()
-val topLevels = object : Map<String, TopLevel> by topLevelsMutable {}
+val topLevels = topLevelsMutable.asMap()
 
 @OptIn(ExperimentalCoroutinesApi::class)
 class TopLevel(val id: String) : Widget(size = Size.Fill), DefaultLifecycleObserver {
@@ -42,7 +44,7 @@ class TopLevel(val id: String) : Widget(size = Size.Fill), DefaultLifecycleObser
         }
     }
 
-    var child: Widget? = null
+    var child by Child()
 
     override val visibility = visibilityEvents.consumeAsFlow().onEach {
         val (activity, event) = it

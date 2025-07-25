@@ -6,9 +6,10 @@ import android.graphics.Rect
 import dev.mazharhussain.widget_lib.framework.Size
 import dev.mazharhussain.widget_lib.framework.Widget
 import dev.mazharhussain.widget_lib.framework.toPx
+import dev.mazharhussain.widget_lib.framework.utils.children
 
 class Column(size: Size) : Widget(size) {
-    val children = mutableListOf<Widget>()
+    val children = children()
 
     override fun onDrawForeground(context: Context, bounds: Rect, canvas: Canvas) {
         val density = context.resources.displayMetrics.density

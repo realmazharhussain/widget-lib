@@ -7,11 +7,12 @@ import dev.mazharhussain.widget_lib.framework.Length
 import dev.mazharhussain.widget_lib.framework.Size
 import dev.mazharhussain.widget_lib.framework.Widget
 import dev.mazharhussain.widget_lib.framework.toPx
+import dev.mazharhussain.widget_lib.framework.utils.children
 
 class Row(size: Size) : Widget(size) {
     constructor(width: Length, height: Length): this(Size(width, height))
 
-    val children = mutableListOf<Widget>()
+    val children = children()
 
     override fun onDrawForeground(context: Context, bounds: Rect, canvas: Canvas) {
         val density = context.resources.displayMetrics.density
