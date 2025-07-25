@@ -1,12 +1,12 @@
-package dev.mazharhussain.widget_lib.framework.foundation.layouts
+package dev.mazharhussain.widget_lib.framework.layouts
 
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Rect
-import dev.mazharhussain.widget_lib.framework.foundation.Length
-import dev.mazharhussain.widget_lib.framework.foundation.Size
-import dev.mazharhussain.widget_lib.framework.foundation.Widget
-import dev.mazharhussain.widget_lib.framework.foundation.toPx
+import dev.mazharhussain.widget_lib.framework.Length
+import dev.mazharhussain.widget_lib.framework.Size
+import dev.mazharhussain.widget_lib.framework.Widget
+import dev.mazharhussain.widget_lib.framework.toPx
 
 class CenterBox(size: Size) : Layout(size) {
 

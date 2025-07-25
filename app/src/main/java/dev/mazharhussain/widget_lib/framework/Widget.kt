@@ -1,4 +1,4 @@
-package dev.mazharhussain.widget_lib.framework.foundation
+package dev.mazharhussain.widget_lib.framework
 
 import android.content.Context
 import android.graphics.Canvas

@@ -1,18 +1,18 @@
 package dev.mazharhussain.widget_lib
 
 import android.graphics.Color
-import dev.mazharhussain.widget_lib.framework.foundation.Length
-import dev.mazharhussain.widget_lib.framework.foundation.Size
-import dev.mazharhussain.widget_lib.framework.foundation.TopLevel
-import dev.mazharhussain.widget_lib.framework.foundation.WidgetActivity
-import dev.mazharhussain.widget_lib.framework.foundation.dp
-import dev.mazharhussain.widget_lib.framework.foundation.layouts.CenterBox
-import dev.mazharhussain.widget_lib.framework.foundation.layouts.Column
-import dev.mazharhussain.widget_lib.framework.foundation.layouts.Row
-import dev.mazharhussain.widget_lib.framework.foundation.widgets.Circle
-import dev.mazharhussain.widget_lib.framework.foundation.widgets.Rectangle
-import dev.mazharhussain.widget_lib.framework.foundation.widgets.Text
-import dev.mazharhussain.widget_lib.framework.foundation.widgets.Triangle
+import dev.mazharhussain.widget_lib.framework.Length
+import dev.mazharhussain.widget_lib.framework.Size
+import dev.mazharhussain.widget_lib.framework.TopLevel
+import dev.mazharhussain.widget_lib.framework.WidgetActivity
+import dev.mazharhussain.widget_lib.framework.dp
+import dev.mazharhussain.widget_lib.framework.layouts.CenterBox
+import dev.mazharhussain.widget_lib.framework.layouts.Column
+import dev.mazharhussain.widget_lib.framework.layouts.Row
+import dev.mazharhussain.widget_lib.framework.widgets.Circle
+import dev.mazharhussain.widget_lib.framework.widgets.Rectangle
+import dev.mazharhussain.widget_lib.framework.widgets.Text
+import dev.mazharhussain.widget_lib.framework.widgets.Triangle
 
 
 class MainActivity : WidgetActivity() {
